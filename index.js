@@ -12,73 +12,32 @@ function disable() {
   document.getElementById("spouse").value = "";
   document.getElementById("spouse").disabled = true;
 }
-form.addEventListener('submit',(event) => {
-  event.preventDefault();
-  validate();
-})
-const isEmail = (emailval) => {
-  var atSymbol = emailval.indexOf("@");
-  if(atSymbol < 1)
-  return false;
-  var dot =emailval.lastIndexOf('.');
-  if(dot <=atSymbol+2)
-  return false;
-  if(dot === emailval.length - 1)
-  return false;
-
-  return true;
+function onsubmitt() {
+  if(document.getElementById('agree').checked) 
+  { return true; } 
+  else { 
+    alert('Please indicate that you have read and agree to the Terms and Conditions'); return false; 
+  }
+}
+function setErrormsg(){
+  
+  alert('Please indicate that you have read and agree to the Terms and Conditions'); 
+  return false; 
 
 }
-const validate = () => {
-  
-const firstnamval = firstname.value.trim();
+function validate(){
+  const firstnamval = firstname.value.trim();
 const lastnamval = lastname.value.trim();
 const emailval = email.value.trim();
 const spouseval= spouse.value.trim();
 
 if(firstnameval ==="")
 {
-  setErrormsg(firstname,'First Name cannot be empty');
+  
+  alert('Please indicate that you have read and agree to the Terms and Conditions'); 
+  return false; 
 }
-else{
-  setSuccessmsg(firstname);
-}
-
-
-if(lastnameval ==="")
-{
-  setErrormsg(lastname,'Last Name cannot be empty');
-}
-else{
-  setSuccessmsg(lastname);
+return true;
 }
 
 
-if(emailval ==="")
-{
-  setErrormsg(email,'email Name cannot be empty');
-}else if(!isEmail(emailval))
-{
-  setErrormsg(email,'Not a valid Email');
-}
-else{
-  setSuccessmsg(email);
-}
-
-
-if(spouseval ==="")
-{
-  setErrormsg(spouse,'Spouse Name cannot be empty');
-}
-else{
-  setSuccessmsg(spouse);
-}
-}
-function setErrormsg(input, errormsgs){
-  const formControl = input.parentElement;
-  const small = formControl.querySelector('small');
-  formControl.className= "form-control error";
-  small.innerText = errormsgs;
-
-
-}
