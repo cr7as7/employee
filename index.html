@@ -68,6 +68,7 @@
             id="married"
             name="Maritial Status"
             value="married"
+            onclick="enable()"
           />
           <label for="married">Married</label>
           <input
@@ -75,6 +76,7 @@
             id="notmarried"
             name="Maritial Status"
             value="notmarried"
+            onclick="disable()"
           />
           <label for="notmarried">Not Married</label>
           <i class="fas fa-check-circle"></i>
@@ -88,6 +90,7 @@
             name=""
             id="spouse"
             placeholder="Enter Name of your Spouse"
+            disabled="true"
           />
           <i class="fas fa-check-circle"></i>
           <i class="fas fa-exclamation-circle"></i>
@@ -106,11 +109,10 @@
           <i class="fas fa-exclamation-circle"></i>
           <small>Error Msg</small>
         </div>
-        <div class="kuchbhi">
-          <input type="checkbox" name="checkbox" value="check" id="agree" /> I
-          have read and agree to the Terms and Conditions and Privacy Policy
-          <input type="submit" name="submit" class="btn" value="submit" />
-        </div>
+
+        <input type="checkbox" name="checkbox" value="check" id="agree" /> I
+        have read and agree to the Terms and Conditions
+        <input type="submit" name="" class="btn" value="submit" />
       </form>
     </div>
   </body>

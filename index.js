@@ -5,11 +5,13 @@ const email = document.getElementById('email');
 const spouse = document.getElementById('spouse');
 const notmarried = document.getElementById('notmarried');
 
-if(notmarried.checked)
-{
-  spouse.setAttribute("disabled","disabled");
+function enable() {
+  document.getElementById("spouse").disabled = false;
 }
-
+function disable() {
+  document.getElementById("spouse").value = "";
+  document.getElementById("spouse").disabled = true;
+}
 form.addEventListener('submit',(event) => {
   event.preventDefault();
   validate();
@@ -71,4 +73,12 @@ if(spouseval ==="")
 else{
   setSuccessmsg(spouse);
 }
+}
+function setErrormsg(input, errormsgs){
+  const formControl = input.parentElement;
+  const small = formControl.querySelector('small');
+  formControl.className= "form-control error";
+  small.innerText = errormsgs;
+
+
 }
