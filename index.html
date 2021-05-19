@@ -1,0 +1,117 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Input Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Input Form</h2>
+      </div>
+      <form
+        action="#"
+        onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }"
+        class="form"
+        id="form"
+      >
+        <div class="form-control">
+          <label>First Name</label>
+          <input
+            type="text"
+            name=""
+            id="firstname"
+            placeholder="Enter your First name"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Msg</small>
+        </div>
+
+        <div class="form-control">
+          <label>Last Name</label>
+          <input
+            type="text"
+            name=""
+            id="lastname"
+            placeholder="Enter your Last name"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Msg</small>
+        </div>
+
+        <div class="form-control">
+          <label>Gender</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other">Other</label>
+        </div>
+
+        <div class="form-control">
+          <label>Maritial Status</label>
+          <input
+            type="radio"
+            id="married"
+            name="Maritial Status"
+            value="married"
+          />
+          <label for="married">Married</label>
+          <input
+            type="radio"
+            id="notmarried"
+            name="Maritial Status"
+            value="notmarried"
+          />
+          <label for="notmarried">Not Married</label>
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+        </div>
+
+        <div class="form-control">
+          <label>Name of Spouse</label>
+          <input
+            type="text"
+            name=""
+            id="spouse"
+            placeholder="Enter Name of your Spouse"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Msg</small>
+        </div>
+
+        <div class="form-control">
+          <label>Email</label>
+          <input
+            type="text"
+            name=""
+            id="email"
+            placeholder="Enter your Email"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Msg</small>
+        </div>
+        <div class="kuchbhi">
+          <input type="checkbox" name="checkbox" value="check" id="agree" /> I
+          have read and agree to the Terms and Conditions and Privacy Policy
+          <input type="submit" name="submit" class="btn" value="submit" />
+        </div>
+      </form>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>
