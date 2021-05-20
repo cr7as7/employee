@@ -88,6 +88,20 @@ body {
   left: 0;
   visibility: hidden;
 }
+/* .form-control[data-error] .input{
+  border-color: #c92432;
+  color: #c92432;
+  background: #fffafa;
+
+
+}
+.form-control[data-error]::after {
+content: attr(data-error);
+font-size: 0.85em;
+color: #9c3c44;
+display: block;
+margin: 10px 0;
+} */
 .form-control.error small {
   visibility: visible;
 }
