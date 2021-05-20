@@ -4,13 +4,9 @@ const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
 let spouse = document.getElementById('spouse');
 const notmarried = document.getElementById('notmarried');
-// var save_value=document.getElementById("save_value");
-// var read_localstorage=document.getElementById("read_localstorage");
-// var localstorage_value=document.getElementById("localstorage_value");
-// var read_all_data=document.getElementById("read_all_data");
-if(spouse.value ==="")
-spouse.value="N/A";
 let storearray=[];
+
+
 function display(){
     localStorage.setItem("added-items",firstname.value+" "+lastname.value+" "+email.value());
    
@@ -24,14 +20,6 @@ console.log(storearray);
 }
 
 
-
-
-
-document.querySelectorAll('input').forEach((input) => {
-  input.addEventListener('blur', function() {
-    this.classList.toggle('green', this.value.length > 0);
-  });
-});
 
 
 function enable() {
