@@ -88,6 +88,9 @@ body {
   left: 0;
   visibility: hidden;
 }
+.green {
+  border: 2px solid green;
+}
 /* .form-control[data-error] .input{
   border-color: #c92432;
   color: #c92432;

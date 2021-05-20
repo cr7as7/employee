@@ -24,7 +24,11 @@ read_all_data.onclick=function(){
     console.log("Key : "+key+" : Value : "+localStorage.getItem(key));
 }
 }
-
+document.querySelectorAll('input').forEach((input) => {
+  input.addEventListener('blur', function() {
+    this.classList.toggle('green', this.value.length > 0);
+  });
+});
 
 
 function enable() {
@@ -58,12 +62,12 @@ function onempty(){
   }
    x=document.forms["myForm"]["lastname"].value.trim();
    if(x== ""){
-   alert("last name must be filled out");
+    lastname.style.border="1px solid red";
   return false; 
   }
   x=document.forms["myForm"]["email"].value.trim();
    if(x== ""){
-   alert("email must be filled out");
+    email.style.border="1px solid red";
   return false; 
   }
   return true;
