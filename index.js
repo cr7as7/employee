@@ -8,7 +8,7 @@ let storearray=[];
 
 
 function display(){
-    localStorage.setItem("added-items",firstname.value+" "+lastname.value+" "+email.value());
+    localStorage.setItem("added-items",firstname.value+" "+lastname.value+" "+email.value);
    
   for (var i = 0; i < localStorage.length; i++){
      let x=localStorage.getItem(localStorage.key(i));
@@ -31,12 +31,7 @@ function disable() {
 }
 
 function onsubmitt() {
-  // const firstnamval = firstname.value.trim();
-  // const lastnamval = lastname.value.trim();
-  // const emailval = email.value.trim();
-  // const spouseval= spouse.value.trim();
-  
-  
+
   if(document.getElementById('agree').checked) 
   { return true; } 
   else { 
@@ -58,33 +53,33 @@ function isEmail(emailval){
   return true;
 
 }
+function isInputempty(input,inputText){
+  if(inputText== ""){
+    input.style.border="1px solid red";
+  return false; 
+  }else
+  {
+    input.style.border="1px solid #2ecc71";
+  }
+  return true;
+}
 function onempty(){
-   var x=document.forms["myForm"]["firstname"].value.trim();
-   if(x== ""){
-  //  alert("name must be filled out");
-    firstname.style.border="1px solid red";
-  return false; 
-  }else
-  {
-    firstname.style.border="1px solid #2ecc71";
-  }
-   x=document.forms["myForm"]["lastname"].value.trim();
-   if(x== ""){
-    lastname.style.border="1px solid red";
-  return false; 
-  }else
-  {
-    lastname.style.border="1px solid #2ecc71";
-  }
-  x=document.forms["myForm"]["email"].value.trim();
-   if(!isEmail(x)){
+   var fnameText=document.forms["myForm"]["firstname"].value.trim();
+   
+  var bool=isInputempty(firstname,fnameText);
+  
+  lnameText=document.forms["myForm"]["lastname"].value.trim();
+  bool &=isInputempty(lastname,lnameText);
+  
+  var inputText=document.forms["myForm"]["email"].value.trim();
+   if(!isEmail(inputText)){
     email.style.border="1px solid red";
   return false; 
   }else
   {
     email.style.border="1px solid #2ecc71";
   }
-  return true;
+  return bool;
 }
 function validateform(){
   return (onsubmitt() && onempty());
