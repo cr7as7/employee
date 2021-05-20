@@ -7,6 +7,7 @@ const notmarried = document.getElementById('notmarried');
 var save_value=document.getElementById("save_value");
 var read_localstorage=document.getElementById("read_localstorage");
 var localstorage_value=document.getElementById("localstorage_value");
+var read_all_data=document.getElementById("read_all_data");
 
   save_value.onclick=function(){
     localStorage.setItem(firstname.value,firstname.value);
@@ -16,7 +17,13 @@ var localstorage_value=document.getElementById("localstorage_value");
     localstorage_value.textContent=localStorage.getItem(firstname.value);
 }
 
-
+read_all_data.onclick=function(){
+  var keys=Object.keys(localStorage);
+  console.log(keys);
+  for(var key of keys){
+    console.log("Key : "+key+" : Value : "+localStorage.getItem(key));
+}
+}
 
 
 
