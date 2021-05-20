@@ -13,31 +13,30 @@ function disable() {
   document.getElementById("spouse").disabled = true;
 }
 function onsubmitt() {
+  // const firstnamval = firstname.value.trim();
+  // const lastnamval = lastname.value.trim();
+  // const emailval = email.value.trim();
+  // const spouseval= spouse.value.trim();
+  
+  
   if(document.getElementById('agree').checked) 
   { return true; } 
   else { 
     alert('Please indicate that you have read and agree to the Terms and Conditions'); return false; 
+    return false;
+  }
+ 
+}
+function onempty(){
+   var x=document.forms["myForm"]["firstname"].value;
+   if(x== ""){
+   alert("name must be filled out");
+  return false; 
   }
 }
-function setErrormsg(){
-  
-  alert('Please indicate that you have read and agree to the Terms and Conditions'); 
-  return false; 
+function validateform(){
+  return (onsubmitt()&onempty());
+}
 
-}
-function validate(){
-  const firstnamval = firstname.value.trim();
-const lastnamval = lastname.value.trim();
-const emailval = email.value.trim();
-const spouseval= spouse.value.trim();
-
-if(firstnameval ==="")
-{
-  
-  alert('Please indicate that you have read and agree to the Terms and Conditions'); 
-  return false; 
-}
-return true;
-}
 
 

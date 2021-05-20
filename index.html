@@ -19,7 +19,14 @@
       <div class="header">
         <h2>Input Form</h2>
       </div>
-      <form action="#" onsubmit="onsubmitt()" class="form" id="form">
+      <form
+        action="#"
+        name="myForm"
+        onsubmit="return validateform()"
+        class="form"
+        id="form"
+        required
+      >
         <div class="form-control">
           <label>First Name</label>
           <input
@@ -107,14 +114,7 @@
 
         <input type="checkbox" name="checkbox" value="check" id="agree" /> I
         have read and agree to the Terms and Conditions
-        <input
-          type="submit"
-          onsubmit="validate()"
-          name=""
-          class="btn"
-          value="submit"
-          method="post"
-        />
+        <input type="submit" name="" class="btn" value="submit" method="post" />
       </form>
     </div>
   </body>
