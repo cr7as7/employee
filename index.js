@@ -2,6 +2,7 @@ const form = document.getElementById('form');
 const firstname = document.getElementById('firstname');
 const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
+const checkbox = document.getElementById('agree');
 let spouse = document.getElementById('spouse');
 const notmarried = document.getElementById('notmarried');
 let storearray=[];
@@ -32,10 +33,11 @@ function disable() {
 
 function onsubmitt() {
 
-  if(document.getElementById('agree').checked) 
+  if(checkbox.checked) 
   { return true; } 
   else { 
-    alert('Please indicate that you have read and agree to the Terms and Conditions'); return false; 
+    
+    checkbox.style.outline="2px solid red";
     return false;
   }
  
@@ -64,14 +66,13 @@ function isInputempty(input,inputText){
   return true;
 }
 function onempty(){
-   var fnameText=document.forms["myForm"]["firstname"].value.trim();
-   
-  var bool=isInputempty(firstname,fnameText);
+  let fnameText=document.forms["myForm"]["firstname"].value.trim();
+  let bool=isInputempty(firstname,fnameText);
   
-  lnameText=document.forms["myForm"]["lastname"].value.trim();
+  let lnameText=document.forms["myForm"]["lastname"].value.trim();
   bool &=isInputempty(lastname,lnameText);
   
-  var inputText=document.forms["myForm"]["email"].value.trim();
+  let inputText=document.forms["myForm"]["email"].value.trim();
    if(!isEmail(inputText)){
     email.style.border="1px solid red";
   return false; 
