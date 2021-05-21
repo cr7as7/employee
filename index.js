@@ -3,8 +3,14 @@ const firstname = document.getElementById('firstname');
 const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
 const checkbox = document.getElementById('agree');
-let spouse = document.getElementById('spouse');
+const male = document.getElementById('male');
+const female = document.getElementById('female');
+const other = document.getElementById('other');
 const notmarried = document.getElementById('notmarried');
+const married = document.getElementById('married');
+const maritial = document.getElementById('maritial');
+const gender = document.getElementById('gender');
+let spouse = document.getElementById('spouse');
 let storearray=[];
 
 
@@ -32,14 +38,29 @@ function disable() {
 }
 
 function onsubmitt() {
-
-  if(checkbox.checked) 
-  { return true; } 
-  else { 
+let flag=true;
+  if(!checkbox.checked) 
+   { 
     
     checkbox.style.outline="2px solid red";
-    return false;
+    flag= false;
   }
+  if(!(male.checked || female.checked || other.checked))
+  {
+    gender.style.color="red";
+    flag= false;
+  }
+
+
+  if(!(married.checked || notmarried.checked ))
+  {
+    maritial.style.color="red";
+    flag= false;
+  }
+
+
+
+  return flag;
  
 }
 function isEmail(emailval){
@@ -73,17 +94,36 @@ function onempty(){
   bool &=isInputempty(lastname,lnameText);
   
   let inputText=document.forms["myForm"]["email"].value.trim();
+
+
+
    if(!isEmail(inputText)){
     email.style.border="1px solid red";
-  return false; 
+  bool= false; 
   }else
   {
     email.style.border="1px solid #2ecc71";
   }
+
+  
+//if married button is checked but name of spouse is not there
+
+  if(married.checked){
+  inputText=document.forms["myForm"]["spouse"].value.trim();
+  }
+
+  if(married.checked && inputText ==="")
+  {
+    spouse.style.border="1px solid red";
+    bool=false;
+  }
+  else{
+    spouse.style.border="1px solid #2ecc71";
+  }
   return bool;
 }
 function validateform(){
-  return (onsubmitt() && onempty());
+  return (onsubmitt() & onempty());
 }
 
 

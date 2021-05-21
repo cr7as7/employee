@@ -65,22 +65,7 @@ body {
   margin-left: 50px;
   
 }
-#email{
-  margin-left: 21%;
 
-}
-#spouse{
-  margin-left: 9px;
-}
-#male {
-  margin-left: 77px;
-}
-#married{
-  margin-left: 24px;
-}
-#notmarried{
-  margin-left: 27px;
-}
 .form-control input:focus {
   outline: 0;
   border-color: #777;
@@ -109,6 +94,22 @@ body {
 }
 .form .btn:hover {
   background: linear-gradient(to right, #74ebd5, #9face6);
+}
+#email{
+  margin-left: 21%;
+
+}
+#spouse{
+  margin-left: 9px;
+}
+#male {
+  margin-left: 77px;
+}
+#married{
+  margin-left: 24px;
+}
+#notmarried{
+  margin-left: 27px;
 }
 @media (max-width: 998px) {
   .container {
