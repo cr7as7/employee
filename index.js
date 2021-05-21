@@ -15,7 +15,7 @@ let storearray=[];
 
 
 function display(){
-    localStorage.setItem("added-items",firstname.value+" "+lastname.value+" "+email.value);
+    
    
   for (var i = 0; i < localStorage.length; i++){
      let x=localStorage.getItem(localStorage.key(i));
@@ -129,8 +129,64 @@ function onempty(){
   }
   return bool;
 }
+function genderString(){
+  if(male.checked){
+    return "Male";
+    }else if(female.checked){
+      return "Female";
+    }else{
+      return "Other";
+    }
+}
+function maritialString(){
+  if(married.checked)
+  {
+    return "married";
+  }
+  else{
+    return "Not married";
+  }
+}
+function wifeString(){
+
+  if(married.checked)
+  {
+    return spouse.value;
+  }
+  else{
+    return "N/A";
+  }
+
+}
 function validateform(){
-  return (onsubmitt() & onempty());
+
+  if(!(onsubmitt() || onempty()))
+  {
+    return false;
+  }
+  let male_or_female = genderString();
+  let maritial = maritialString();
+  let wife = wifeString();
+  let Email = email.value;
+  if(wife==="")
+  {
+    spouse.style.border="1px solid red";
+  return false;
+  }
+
+  
+  
+  const obj ={
+    firstName: firstname.value,
+    lastName: lastname.value,
+    gender: male_or_female,
+    maritialStatus: maritial,
+    spouseName: wife,
+    email:Email
+  }
+  console.log(obj);
+  console.log(localStorage.setItem("added-items",JSON.stringify(obj)));
+  return true;
 }
 
 
