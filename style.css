@@ -61,7 +61,24 @@ body {
   border: 2px solid #f0f0f0;
   border-radius: 5px;
   padding: 12px;
+  width: max-content;
+  margin-left: 50px;
   
+}
+#email{
+  margin-left: 21%;
+}
+#spouse{
+  margin-left: 10px;
+}
+#male {
+  margin-left: 75px;
+}
+#married{
+  margin-left: 22px;
+}
+#notmarried{
+  margin-left: 27px;
 }
 .form-control input:focus {
   outline: 0;
