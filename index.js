@@ -26,9 +26,6 @@ console.log(storearray);
 
 }
 
-
-
-
 function enable() {
   document.getElementById("spouse").disabled = false;
 }
@@ -105,14 +102,12 @@ function onempty(){
     email.style.border="1px solid #2ecc71";
   }
 
-  
+
 //if married button is checked but name of spouse is not there
 
   if(married.checked){
-  inputText=document.forms["myForm"]["spouse"].value.trim();
-  }
-
-  if(married.checked && inputText ==="")
+  let text=document.forms["myForm"]["spouse"].value.trim();
+   if(text ==="")
   {
     spouse.style.border="1px solid red";
     bool=false;
@@ -120,6 +115,7 @@ function onempty(){
   else{
     spouse.style.border="1px solid #2ecc71";
   }
+}
   return bool;
 }
 function validateform(){
