@@ -33,29 +33,36 @@ function disable() {
   document.getElementById("spouse").value = "";
   document.getElementById("spouse").disabled = true;
 }
-
-function onsubmitt() {
-let flag=true;
+function isTermscheck(){
   if(!checkbox.checked) 
-   { 
-    
-    checkbox.style.outline="2px solid red";
-    flag= false;
-  }
+  { 
+   checkbox.style.outline="2px solid red";
+   return false;
+   
+ }
+ return true;
+}
+function isGendercheck(){
   if(!(male.checked || female.checked || other.checked))
   {
     gender.style.color="red";
-    flag= false;
+    return false;
   }
-
-
+  return true;
+}
+function isMarriedcheck(){
   if(!(married.checked || notmarried.checked ))
   {
     maritial.style.color="red";
-    flag= false;
+    return false;
   }
-
-
+  return true;
+}
+function onsubmitt() {
+let flag=true;
+  flag &=isTermscheck();
+  flag &=isGendercheck();
+  flag &=isMarriedcheck();
 
   return flag;
  
@@ -83,6 +90,27 @@ function isInputempty(input,inputText){
   }
   return true;
 }
+function validEmail(input,inputText){
+  if(!isEmail(inputText)){
+    input.style.border="1px solid red";
+  return false; 
+  }else
+  {
+    input.style.border="1px solid #2ecc71";
+  }
+  return true;
+}
+function isSpouse(input,inputText){
+  if(inputText ==="")
+  {
+    input.style.border="1px solid red";
+    return false;
+  }
+  else{
+    input.style.border="1px solid #2ecc71";
+  }
+  return true;
+}
 function onempty(){
   let fnameText=document.forms["myForm"]["firstname"].value.trim();
   let bool=isInputempty(firstname,fnameText);
@@ -91,31 +119,14 @@ function onempty(){
   bool &=isInputempty(lastname,lnameText);
   
   let inputText=document.forms["myForm"]["email"].value.trim();
-
-
-
-   if(!isEmail(inputText)){
-    email.style.border="1px solid red";
-  bool= false; 
-  }else
-  {
-    email.style.border="1px solid #2ecc71";
-  }
-
+  bool &=validEmail(email,inputText);
 
 //if married button is checked but name of spouse is not there
 
   if(married.checked){
   let text=document.forms["myForm"]["spouse"].value.trim();
-   if(text ==="")
-  {
-    spouse.style.border="1px solid red";
-    bool=false;
+    bool &=isSpouse(spouse,text);
   }
-  else{
-    spouse.style.border="1px solid #2ecc71";
-  }
-}
   return bool;
 }
 function validateform(){
