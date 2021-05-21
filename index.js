@@ -17,12 +17,13 @@ let storearray=[];
 function display(){
     
    
-  for (var i = 0; i < localStorage.length; i++){
-     let x=localStorage.getItem(localStorage.key(i));
-     storearray.push(x);
-}
-console.log(storearray);
-    document.getElementById("display_local_storage_data").innerHTML=storearray;
+  
+     let x=localStorage.getItem(localStorage.key(0));
+     console.log(JSON.parse(x));
+    
+
+// console.log(storearray);
+    // document.getElementById("display_local_storage_data").innerHTML=storearray;
 
 }
 
@@ -184,8 +185,10 @@ function validateform(){
     spouseName: wife,
     email:Email
   }
-  console.log(obj);
-  console.log(localStorage.setItem("added-items",JSON.stringify(obj)));
+  
+  storearray.push(obj);
+  console.log(storearray);
+  localStorage.setItem("added-items",JSON.stringify(storearray));
   return true;
 }
 
