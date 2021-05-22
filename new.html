@@ -1,0 +1,116 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Input Form</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css" />
+ 
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Input Form</h2>
+      </div>
+      <form
+
+        name="myForm"
+        onsubmit="return validateform()"
+        class="form"
+        id="form"
+        required
+      >
+        <table>
+          <tr class="form-control"> 
+            <td width="200"> <label>First Name</label></td>
+            <td><input
+              type="text"
+              name=""
+              id="firstname"
+              placeholder="Enter your First name"
+              class="input"
+              value=""></td>
+          </tr>
+          <tr class="form-control"> 
+            <td> <label>Last Name</label></td>
+            <td><input
+              type="text"
+              name=""
+              id="lastname"
+              placeholder="Enter your Last name"
+              class="input"
+              value=""
+            /></td>
+          </tr>
+         
+          <tr class="form-control">
+            <td><label id="gender">Gender</label></td>
+            <td> 
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="other" />
+              <label for="other">Other</label></td>   
+          </tr>
+       
+          <tr class="form-control">
+            <td><label id="maritial">Maritial Status</label></td>
+            <td>
+              <input
+            type="radio"
+            id="married"
+            name="Maritial Status"
+            value="married"
+            onclick="enable()"
+          />
+          <label for="married">Married</label>
+          <input
+            type="radio"
+            id="notmarried"
+            name="Maritial Status"
+            value="notmarried"
+            onclick="disable()"
+          />
+          <label for="notmarried">Not Married</label>
+            </td>
+          </tr>
+          <tr class="form-control">
+            <td><label>Name of Spouse</label></td>
+            <td>
+              <input
+            type="text"
+            name=""
+            id="spouse"
+            placeholder="Enter Name of your Spouse"
+            disabled="true"
+          />
+            </td>
+          </tr>
+          <tr class="form-control">
+            <td>
+              <label>Email</label>
+            </td>
+            <td>
+              <input
+            type="text"
+            name=""
+            id="email"
+            placeholder="Enter your Email"
+          />
+            </td>
+          </tr>
+        </table>
+        <input type="checkbox" name="checkbox" value="check" id="agree" /> I
+        have read and agree to the Terms and Conditions
+        <br>
+        <input type="submit" name="" class="btn" value="submit"/>
+        <a class="btn" style="color: white;text-decoration: none;text-align: center;" href="./index2.html"> DISPLAY </a>
+     
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+
+</html>
