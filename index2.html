@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container">
-      <table id="table" class="content-table">
+      <table id="table">
       </table>
     </div>
 
@@ -22,13 +22,13 @@
      let arr=JSON.parse(x);
      console.log(arr);
       document.getElementById("table").innerHTML="";
-      document.getElementById("table").innerHTML=` <tr id="fcfs">
-      <td>First Name&emsp;</td>
-      <td>Last Name&emsp;</td>
-      <td>Gender&emsp;</td>
-      <td>Maritial Status&emsp;</td>
-      <td>Spouse&emsp;</td>
-      <td>Email&emsp;</td>
+      document.getElementById("table").innerHTML=` <tr>
+      <td>firstname&emsp;</td>
+      <td>Lastname&emsp;</td>
+      <td>gender&emsp;</td>
+      <td>maritial status&emsp;</td>
+      <td>spouse&emsp;</td>
+      <td>email&emsp;</td>
       
     </tr>`;
      for(let i=0;i<arr.length;i++)

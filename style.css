@@ -112,26 +112,21 @@ body {
 .form .btn:hover {
   background: linear-gradient(to right, #74ebd5, #9face6);
 }
-.content-table{
-  border-collapse: collapse;
-  margin: 25px 0px;
-  font-size: 0.9em;
-  min-width: 400px;
+/* #email{
+  margin-left: 21%;
+
+} */
+/* #spouse{
+  margin-left: 9px;
+} */
+#male {
+  /* margin-left: 77px; */
 }
-#fcfs{
-  font-weight: bold;
-  background-color: #009879;
-  color: #ffffff;
-  text-align: left;
+#married{
+  /* margin-left: 24px; */
 }
-.content-table td{
-  padding: 12px 15px;
-}
-.content-table tr{
-  border-bottom: 1px solid #dddddd;
-}
-.content-table tr:nth-of-type(even){
-  background-color: #f3f3f3;
+#notmarried{
+  /* margin-left: 27px; */
 }
 @media (max-width: 998px) {
   .container {

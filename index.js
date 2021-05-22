@@ -180,7 +180,7 @@ function validateform(){
   }
   
   storearray.push(obj);
-  // console.log(storearray);
+  console.log(storearray);
   localStorage.setItem("added-items",JSON.stringify(storearray));
   form.reset();
   return true;

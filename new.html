@@ -14,51 +14,49 @@
         <h2>Input Form</h2>
       </div>
       <form
-
+        action="#"
         name="myForm"
-        onsubmit="return validateform()"
+        onsubmit="validateform(); return false;"
         class="form"
         id="form"
-        required
       >
-        <table>
-          <tr class="form-control"> 
-            <td width="200"> <label>First Name</label></td>
-            <td><input
-              type="text"
-              name=""
-              id="firstname"
-              placeholder="Enter your First name"
-              class="input"
-              value=""></td>
-          </tr>
-          <tr class="form-control"> 
-            <td> <label>Last Name</label></td>
-            <td><input
-              type="text"
-              name=""
-              id="lastname"
-              placeholder="Enter your Last name"
-              class="input"
-              value=""
-            /></td>
-          </tr>
-         
-          <tr class="form-control">
-            <td><label id="gender">Gender</label></td>
-            <td> 
-              <input type="radio" id="male" name="gender" value="male" />
-              <label for="male">Male</label>
-              <input type="radio" id="female" name="gender" value="female" />
-              <label for="female">Female</label>
-              <input type="radio" id="other" name="gender" value="other" />
-              <label for="other">Other</label></td>   
-          </tr>
-       
-          <tr class="form-control">
-            <td><label id="maritial">Maritial Status</label></td>
-            <td>
-              <input
+        <div class="form-control" data-error="Incorrect">
+          <label>First Name</label>
+          <input
+            type="text"
+            name=""
+            id="firstname"
+            placeholder="Enter your First name"
+            class="input"
+            value=""
+          />
+      
+        </div>
+
+        <div class="form-control">
+          <label>Last Name</label>
+          <input
+            type="text"
+            name=""
+            id="lastname"
+            placeholder="Enter your Last name"
+          />
+          
+        </div>
+
+        <div class="form-control">
+          <label id="gender">Gender</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other">Other</label>
+        </div>
+
+        <div class="form-control">
+          <label id="maritial">Maritial Status</label>
+          <input
             type="radio"
             id="married"
             name="Maritial Status"
@@ -74,40 +72,37 @@
             onclick="disable()"
           />
           <label for="notmarried">Not Married</label>
-            </td>
-          </tr>
-          <tr class="form-control">
-            <td><label>Name of Spouse</label></td>
-            <td>
-              <input
+          
+        </div>
+
+        <div class="form-control">
+          <label>Name of Spouse</label>
+          <input
             type="text"
             name=""
             id="spouse"
             placeholder="Enter Name of your Spouse"
             disabled="true"
           />
-            </td>
-          </tr>
-          <tr class="form-control">
-            <td>
-              <label>Email</label>
-            </td>
-            <td>
-              <input
+          
+        </div>
+
+        <div class="form-control">
+          <label>Email</label>
+          <input
             type="text"
             name=""
             id="email"
             placeholder="Enter your Email"
           />
-            </td>
-          </tr>
-        </table>
+          
+        </div>
+
         <input type="checkbox" name="checkbox" value="check" id="agree" /> I
         have read and agree to the Terms and Conditions
         <br>
-        <input type="submit" name="" class="btn" value="submit"/>
-        <a class="btn" style="color: white;text-decoration: none;text-align: center;" href="./index2.html"> DISPLAY </a>
-     
+        <input type="submit" name="" class="btn" value="submit" method="post" />
+        <a style="color: white;text-decoration: none;text-align: center;" class="btn" href="./index2.html"><strong>DISPLAY</strong></a>
       </form>
     </div>
     <script src="index.js"></script>
