@@ -13,32 +13,7 @@ const gender = document.getElementById('gender');
 let spouse = document.getElementById('spouse');
 let storearray=[];
 
-
-function display(){
-    
-   
-  
-     let x=localStorage.getItem(localStorage.key(0));
-     console.log(JSON.parse(x)[0].firstName);
-     let arr=JSON.parse(x);
-      console.log(arr);
-     for(let i=0;i<arr.length;i++)
-     {
-      document.getElementById('table').innerHTML+=`<tr>
-      <td>${arr[i].firstName}</td>
-      <td>${arr[i].lastName}</td>
-      <td>${arr[i].gender}</td>
-      <td>${arr[i].maritialStatus}</td>
-      <td>${arr[i].spouseName}</td>
-      <td>${arr[i].email}</td>
-      
-    </tr>`
-     }
-
-// console.log(storearray);
-    // document.getElementById("display_local_storage_data").innerHTML=storearray;
-
-}
+// console.log("helloo");
 
 function enable() {
   document.getElementById("spouse").disabled = false;
@@ -187,6 +162,11 @@ function validateform(){
     spouse.style.border="1px solid red";
   return false;
   }
+  if(!isEmail(email.value))
+  {
+    email.style.border="1px solid red";
+    return false;
+  }
 
   
   
@@ -202,6 +182,7 @@ function validateform(){
   storearray.push(obj);
   // console.log(storearray);
   localStorage.setItem("added-items",JSON.stringify(storearray));
+  form.reset();
   return true;
 }
 
