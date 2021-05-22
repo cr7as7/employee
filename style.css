@@ -128,6 +128,28 @@ body {
 #notmarried{
   /* margin-left: 27px; */
 }
+.content-table{
+  border-collapse: collapse ;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px ;
+}
+.content-table td{
+  padding: 17px 15px;
+}
+.content-table tr{
+  border-bottom: 1px solid #dddddd;
+}
+
+
+
+#fcfs{
+  background-color: #4bb5cf;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+
+}
 @media (max-width: 998px) {
   .container {
     width: calc(100vw - 35vw);
