@@ -14,7 +14,7 @@
 }
 
 body {
-  background-image: var(--lg-lightcolor), url(/images/Groww.jpg);
+  background-image: var(--lg-lightcolor), url(../images/Groww.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   display: flex;
