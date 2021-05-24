@@ -17,10 +17,12 @@ body {
   background-image: var(--lg-lightcolor), url(/images/Groww.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  /* display: flex;
-  align-items: center; */
-  box-sizing: border-box;
-  padding:100px 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+  /* box-sizing: border-box;
+  padding:100px 300px; */
   font-family: 'Montserrat', sans-serif;
   justify-content: center;
   min-height: 100vh;
@@ -120,16 +122,14 @@ body {
   border-collapse: collapse ;
   margin: 25px 0;
   font-size: 0.9em;
-  min-width: 400px ;
+  max-width: 100px ;
 }
 .content-table td{
-  padding: 17px 15px;
+  padding: 8px 5px;
 }
 .content-table tr{
   border-bottom: 1px solid #dddddd;
 }
-
-
 
 #fcfs{
   background-color: #4bb5cf;
