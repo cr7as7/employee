@@ -178,6 +178,22 @@ function wifeString(){
   }
 
 }
+function inputColorNormal(input){
+ 
+    input.style.border="";
+ 
+}
+function allColorNormal(){
+inputColorNormal(firstname);
+inputColorNormal(lastname);
+inputColorNormal(spouse);
+inputColorNormal(email);
+gender.style.color="";
+maritial.style.color="";
+checkbox.style.outline="";
+
+
+}
 function validateform(){
 
   if(!(onsubmitt() || onempty()))
@@ -235,8 +251,10 @@ function validateform(){
   storearray.push(obj);
   console.log(storearray);
   localStorage.setItem("added-items",JSON.stringify(storearray));
-  display();
   form.reset();
+  allColorNormal();
+  display();
+  
 
   return true;
 }
