@@ -73,13 +73,13 @@ function isGendercheck(){
   return true;
 }
 function isMarriedcheck(){
-  if(!(married.checked || notmarried.checked ))
+  if(!married.checked && !notmarried.checked )
   {
     error[3].innerHTML="Error";
     error[3].style.color="red";
     return false;
   }
-  error[2].innerHTML=" ";
+  error[3].innerHTML=" ";
   return true;
 }
 // function onsubmitt() {
@@ -273,13 +273,13 @@ function inputValid(index){
   {
     if(isEmail(inputField[index].value))
     {
-      error[index].innerHTML=" ";
+      error[index+2].innerHTML=" ";
     inputField[index].style.border="1px solid #2ecc71";
     }
     else{
-      error[index].innerText="Error"; 
+      error[index+2].innerText="Error"; 
     console.log(inputField[0].innerText.length);
-    error[index].style.color="red";
+    error[index+2].style.color="red";
     inputField[index].style.border="1px solid red";
     }
   }
