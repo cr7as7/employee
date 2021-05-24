@@ -235,7 +235,9 @@ function validateform(){
   storearray.push(obj);
   console.log(storearray);
   localStorage.setItem("added-items",JSON.stringify(storearray));
+  display();
   form.reset();
+
   return true;
 }
 
