@@ -75,7 +75,7 @@ body {
 .form-control input:focus{
   border-color: #2ecc71;
 }
-#save_value {
+/* #save_value {
   background: var(--lg-color);
   border-radius: 6px;
   border: none;
@@ -91,7 +91,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   transition: all 1s ease;
-}
+} */
 
 
 .form .btn {
@@ -112,22 +112,7 @@ body {
 .form .btn:hover {
   background: linear-gradient(to right, #74ebd5, #9face6);
 }
-/* #email{
-  margin-left: 21%;
 
-} */
-/* #spouse{
-  margin-left: 9px;
-} */
-#male {
-  /* margin-left: 77px; */
-}
-#married{
-  /* margin-left: 24px; */
-}
-#notmarried{
-  /* margin-left: 27px; */
-}
 .content-table{
   border-collapse: collapse ;
   margin: 25px 0;
@@ -150,9 +135,4 @@ body {
   font-weight: bold;
 
 }
-@media (max-width: 998px) {
-  .container {
-    width: calc(100vw - 35vw);
-    max-width: 100%;
-  }
-}
+

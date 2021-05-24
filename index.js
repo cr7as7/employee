@@ -14,7 +14,35 @@ let spouse = document.getElementById('spouse');
 let storearray=[];
 
 // console.log("helloo");
+function display(){
+  const tableData = document.getElementById("table");
+  let x=localStorage.getItem(localStorage.key(0));
+console.log(JSON.parse(x)[0].firstName);
+let arr=JSON.parse(x);
+console.log(arr);
+document.getElementById("table").innerHTML="";
+document.getElementById("table").innerHTML=` <tr id="fcfs">
+<td>First Name&emsp;</td>
+<td>Last Name&emsp;</td>
+<td>Gender&emsp;</td>
+<td>Maritial Status&emsp;</td>
+<td>Spouse&emsp;</td>
+<td>Email&emsp;</td>
 
+</tr>`;
+for(let i=0;i<arr.length;i++)
+{
+document.getElementById('table').innerHTML+=`<tr>
+<td>${arr[i].firstName}</td>
+<td>${arr[i].lastName}</td>
+<td>${arr[i].gender}</td>
+<td>${arr[i].maritialStatus}</td>
+<td>${arr[i].spouseName}</td>
+<td>${arr[i].email}</td>
+
+</tr>`
+}
+}
 function enable() {
   document.getElementById("spouse").disabled = false;
 }
@@ -130,11 +158,14 @@ function genderString(){
 function maritialString(){
   if(married.checked)
   {
-    return "married";
+    return "Married";
   }
   else{
     return "Not married";
   }
+}
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 function wifeString(){
 
@@ -171,11 +202,11 @@ function validateform(){
   
   
   const obj ={
-    firstName: firstname.value,
-    lastName: lastname.value,
+    firstName: capitalizeFirstLetter(firstname.value),
+    lastName: capitalizeFirstLetter(lastname.value),
     gender: male_or_female,
     maritialStatus: maritial,
-    spouseName: wife,
+    spouseName: capitalizeFirstLetter(wife),
     email:Email
   }
   
