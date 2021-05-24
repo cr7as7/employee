@@ -11,6 +11,9 @@ const married = document.getElementById('married');
 const maritial = document.getElementById('maritial');
 const gender = document.getElementById('gender');
 let spouse = document.getElementById('spouse');
+const inputField=document.getElementsByClassName("input");
+const error = document.getElementsByClassName('Td');
+console.log(inputField);
 let storearray=[];
 
 // console.log("helloo");
@@ -62,28 +65,32 @@ function isTermscheck(){
 function isGendercheck(){
   if(!(male.checked || female.checked || other.checked))
   {
-    gender.style.color="red";
+    error[2].innerHTML="Error";
+    error[2].style.color="red";
     return false;
   }
+  error[2].innerHTML=" ";
   return true;
 }
 function isMarriedcheck(){
   if(!(married.checked || notmarried.checked ))
   {
-    maritial.style.color="red";
+    error[3].innerHTML="Error";
+    error[3].style.color="red";
     return false;
   }
+  error[2].innerHTML=" ";
   return true;
 }
-function onsubmitt() {
-let flag=true;
-  flag &=isTermscheck();
-  flag &=isGendercheck();
-  flag &=isMarriedcheck();
+// function onsubmitt() {
+// let flag=true;
+//   flag &=isTermscheck();
+//   flag &=isGendercheck();
+//   flag &=isMarriedcheck();
 
-  return flag;
+//   return flag;
  
-}
+// }
 function isEmail(emailval){
   var atSymbol = emailval.indexOf("@");
   if(atSymbol < 1)
@@ -128,24 +135,24 @@ function isSpouse(input,inputText){
   }
   return true;
 }
-function onempty(){
-  let fnameText=document.forms["myForm"]["firstname"].value.trim();
-  let bool=isInputempty(firstname,fnameText);
+// function onempty(){
+//   // let fnameText=document.forms["myForm"]["firstname"].value.trim();
+//   // let bool=isInputempty(firstname,fnameText);
   
-  let lnameText=document.forms["myForm"]["lastname"].value.trim();
-  bool &=isInputempty(lastname,lnameText);
+//   // let lnameText=document.forms["myForm"]["lastname"].value.trim();
+//   // bool &=isInputempty(lastname,lnameText);
   
-  let inputText=document.forms["myForm"]["email"].value.trim();
-  bool &=validEmail(email,inputText);
+//   // let inputText=document.forms["myForm"]["email"].value.trim();
+//   // bool &=validEmail(email,inputText);
 
-//if married button is checked but name of spouse is not there
+// //if married button is checked but name of spouse is not there
 
-  if(married.checked){
-  let text=document.forms["myForm"]["spouse"].value.trim();
-    bool &=isSpouse(spouse,text);
-  }
-  return bool;
-}
+//   if(married.checked){
+//   let text=document.forms["myForm"]["spouse"].value.trim();
+//     bool &=isSpouse(spouse,text);
+//   }
+//   return bool;
+// }
 function genderString(){
   if(male.checked){
     return "Male";
@@ -196,10 +203,10 @@ checkbox.style.outline="";
 }
 function validateform(){
 
-  if(!(onsubmitt() || onempty()))
-  {
-    return false;
-  }
+  // if(!(onsubmitt() || onempty()))
+  // {
+  //   return false;
+  // }
   if(!isTermscheck())
   {
     return false;
@@ -258,6 +265,41 @@ function validateform(){
 
   return true;
 }
+
+
+
+function inputValid(index){
+  if(index===3)
+  {
+    if(isEmail(inputField[index].value))
+    {
+      error[index].innerHTML=" ";
+    inputField[index].style.border="1px solid #2ecc71";
+    }
+    else{
+      error[index].innerText="Error"; 
+    console.log(inputField[0].innerText.length);
+    error[index].style.color="red";
+    inputField[index].style.border="1px solid red";
+    }
+  }
+  else if(inputField[index].value.length===0)
+  {
+    error[index].innerText="Error"; 
+    console.log(inputField[0].innerText.length);
+    error[index].style.color="red";
+    inputField[index].style.border="1px solid red";
+  }
+  else
+  {
+    error[index].innerHTML=" ";
+    inputField[index].style.border="1px solid #2ecc71";
+  }
+}
+
+
+
+
 
 
 

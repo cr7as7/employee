@@ -3,7 +3,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Employee Input Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <title>Employee Input Form</title>
     
     <link rel="stylesheet" type="text/css" href="style.css" />
  
@@ -24,19 +25,23 @@
         <table id="form-table">
           <tr class="form-control"> 
             <td width="200"> <label>First Name</label></td>
-            <td id="fError"></td>
+            <!-- <td id="fError"></td> -->
             <td><input
+              onfocusout="inputValid(0);"
               type="text"
               name=""
               id="firstname"
               placeholder="Enter your First name"
               class="input"
               value=""></td>
+
+              <td class="Td"></td>
           </tr>
           <tr class="form-control"> 
             <td> <label>Last Name</label></td>
-            <td id="lError"></td>
+            
             <td><input
+              onfocusout="inputValid(1);"
               type="text"
               name=""
               id="lastname"
@@ -44,23 +49,27 @@
               class="input"
               value=""
             /></td>
+            
+            <td class="Td"></td>
           </tr>
+      
 
           <tr class="form-control">
             <td><label id="gender">Gender</label></td>
-            <td id="gError"></td>
+            <!-- <td id="gError"></td> -->
             <td> 
               <input type="radio" id="male" name="gender" value="male" />
               <label for="male">Male</label>
               <input type="radio" id="female" name="gender" value="female" />
               <label for="female">Female</label>
               <input type="radio" id="other" name="gender" value="other" />
-              <label for="other">Other</label></td>   
+              <label for="other">Other</label></td>  
+              <td class="Td" style="margin-top: -10px;padding-bottom: 8px;"></td> 
           </tr>
 
           <tr class="form-control">
             <td><label id="maritial">Maritial Status</label></td>
-            <td id="mError"></td>
+            <!-- <td id="mError"></td> -->
             <td>
               <input
             type="radio"
@@ -79,33 +88,41 @@
           />
           <label for="notmarried">Not Married</label>
             </td>
+            <td class="Td"></td>
           </tr>
           <tr class="form-control">
             <td><label>Name of Spouse</label></td>
-            <td id="sError"></td>
+            <!-- <td id="sError"></td> -->
             <td>
               <input
+              onfocusout="inputValid(2)"
             type="text"
             name=""
             id="spouse"
             placeholder="Enter Name of your Spouse"
             disabled="true"
+            class="input"
+
           />
             </td>
+            <td class="Td"></td>
           </tr>
           <tr class="form-control">
             <td>
               <label>Email</label>
-              <td id="eError"></td>
+              <!-- <td id="eError"></td> -->
             </td>
             <td>
               <input
+              onfocusout="inputValid(3)"
             type="text"
             name=""
             id="email"
             placeholder="Enter your Email"
+            class="input"
           />
             </td>
+            <td class="Td"></td>
           </tr>
         </table>
         <input type="checkbox" name="checkbox" value="check" id="agree" />&nbsp;&nbsp; I
