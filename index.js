@@ -184,6 +184,10 @@ function validateform(){
   {
     return false;
   }
+  if(!isTermscheck())
+  {
+    return false;
+  }
   let male_or_female = genderString();
   let maritial = maritialString();
   let wife = wifeString();
