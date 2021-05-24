@@ -126,6 +126,7 @@ body {
 }
 .content-table td{
   padding: 8px 5px;
+  /* color: #ffffff; */
 }
 .content-table tr{
   border-bottom: 1px solid #dddddd;
