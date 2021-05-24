@@ -188,6 +188,14 @@ function validateform(){
   {
     return false;
   }
+  if(!isMarriedcheck())
+  {
+    return false;
+  }
+  if(!isGendercheck())
+  {
+    return false;
+  }
   let male_or_female = genderString();
   let maritial = maritialString();
   let wife = wifeString();
@@ -201,6 +209,16 @@ function validateform(){
   {
     email.style.border="1px solid red";
     return false;
+  }
+  if(firstname.value==="")
+  {
+    firstname.style.border="1px solid red";
+  return false;
+  }
+  if(lastname.value==="")
+  {
+    lastname.style.border="1px solid red";
+  return false;
   }
 
   

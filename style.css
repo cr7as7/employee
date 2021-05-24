@@ -15,8 +15,11 @@
 
 body {
   background-image: var(--lg-lightcolor), url(../images/Groww.jpg);
-  background-size: 100%;
+  /* background-size: 100%; */
   background-repeat: no-repeat;
+  background-position: center;
+background-attachment: fixed;
+background-size: cover;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -125,8 +128,9 @@ body {
   max-width: 100px ;
 }
 .content-table td{
-  padding: 8px 5px;
+  padding: 18px 50px;
   /* color: #ffffff; */
+  font-weight: bold;
 }
 .content-table tr{
   border-bottom: 1px solid #dddddd;
@@ -136,7 +140,8 @@ body {
   background-color: #4bb5cf;
   color: #ffffff;
   text-align: left;
-  font-weight: bold;
+  font-weight: bolder;
+  /* padding: 50px 18px; */
 
 }
 
