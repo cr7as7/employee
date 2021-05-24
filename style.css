@@ -53,12 +53,18 @@ background-size: cover;
   text-transform: uppercase;
   text-align: center;
 }
+.form-table{
+  border-collapse: separate;
+  border-spacing: 0 1em;
+
+}
 .form {
   padding: 40px;
 }
 .form-control {
   margin-bottom: 10px;
   position: relative;
+
 }
 .form-control label {
   display: inline-block;
