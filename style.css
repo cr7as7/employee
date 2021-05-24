@@ -17,8 +17,10 @@ body {
   background-image: var(--lg-lightcolor), url(/images/Groww.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
+  box-sizing: border-box;
+  padding:100px 300px;
   font-family: 'Montserrat', sans-serif;
   justify-content: center;
   min-height: 100vh;
@@ -26,6 +28,7 @@ body {
 }
 
 .container {
+  
   background-color: #fff;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -136,3 +139,7 @@ body {
 
 }
 
+#form-table{
+  border-collapse: separate;
+        border-spacing: 0 15px;
+}
