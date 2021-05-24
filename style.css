@@ -132,12 +132,14 @@ background-size: cover;
   border-collapse: collapse ;
   margin: 25px 0;
   font-size: 0.9em;
-  max-width: 100px ;
+  /* max-width: 100px ; */
 }
 .content-table td{
   padding: 18px 50px;
   /* color: #ffffff; */
   font-weight: bold;
+  /* column-width: 30px; */
+
 }
 .content-table tr{
   border-bottom: 1px solid #dddddd;
