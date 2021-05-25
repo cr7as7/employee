@@ -221,7 +221,7 @@ function validateform(){
   }
   let male_or_female = genderString();
   let maritial = maritialString();
-  let wife = wifeString();
+  let wife = wifeString().trim();
   let Email = email.value;
   if(wife==="")
   {
@@ -233,12 +233,12 @@ function validateform(){
     email.style.border="1px solid red";
     return false;
   }
-  if(firstname.value==="")
+  if(firstname.value.trim()==="")
   {
     firstname.style.border="1px solid red";
   return false;
   }
-  if(lastname.value==="")
+  if(lastname.value.trim()==="")
   {
     lastname.style.border="1px solid red";
   return false;
@@ -283,7 +283,7 @@ function inputValid(index){
     inputField[index].style.border="1px solid red";
     }
   }
-  else if(inputField[index].value.length===0)
+  else if(inputField[index].value.trim()==="")
   {
     error[index].innerText="Error"; 
     console.log(inputField[0].innerText.length);
