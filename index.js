@@ -180,18 +180,18 @@ checkbox.style.outline="";
 }
 function validateform(){
 
-  
+  let flag=true;
   if(!isTermscheck())
   {
-    return false;
+    flag= false;
   }
   if(!isMarriedcheck())
   {
-    return false;
+    flag= false;
   }
   if(!isGendercheck())
   {
-    return false;
+    flag= false;
   }
   let male_or_female = genderString();
   let maritial = maritialString();
@@ -200,24 +200,27 @@ function validateform(){
   if(wife==="")
   {
     spouse.style.border="1px solid red";
-  return false;
+    flag= false;
   }
   if(!isEmail(email.value))
   {
     email.style.border="1px solid red";
-    return false;
+    flag= false;
   }
   if(firstname.value.trim()==="")
   {
     firstname.style.border="1px solid red";
-  return false;
+    flag= false;
   }
   if(lastname.value.trim()==="")
   {
     lastname.style.border="1px solid red";
-  return false;
+    flag= false;
   }
-
+if(!flag)
+{
+  return false;
+}
   
   
   const obj ={
