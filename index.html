@@ -15,9 +15,8 @@
         <h2>Input Form</h2>
       </div>
       <form
-
         name="myForm"
-        onsubmit="validateform(); return false;"
+        onsubmit="return validateform();"
         class="form"
         id="form"
         
@@ -26,8 +25,9 @@
           <tr class="form-control"> 
             <td width="200"> <label>First Name</label></td>
             <!-- <td id="fError"></td> -->
-            <td><input
-              onfocusout="inputValid(0);"
+            <td><div>
+              <input
+              onfocusout="inputValid(0)"
               type="text"
               name=""
               id="firstname"
@@ -35,69 +35,83 @@
               class="input"
               value=""
               autofocus
-              ></td>
+              >
+              <p class="Td" style="margin-left: 20px;">Enter correct name</p>
+            </div></td>
 
-              <td class="Td"></td>
           </tr>
           <tr class="form-control"> 
             <td> <label>Last Name</label></td>
             
-            <td><input
-              onfocusout="inputValid(1);"
+            <td><div><input
+              onfocusout="inputValid(1)"
               type="text"
               name=""
               id="lastname"
               placeholder="Enter your Last name"
               class="input"
               value=""
-            /></td>
+            /></div>
+            <p class="Td" style="margin-left: 20px;">Enter correct name</p>
+              </td>
             
-            <td class="Td"></td>
           </tr>
       
 
           <tr class="form-control">
             <td><label id="gender">Gender</label></td>
-            <!-- <td id="gError"></td> -->
-            <td> 
-              <input type="radio" id="male" name="gender" value="male" />
-              <label for="male">Male</label>
-              <input type="radio" id="female" name="gender" value="female" />
-              <label for="female">Female</label>
-              <input type="radio" id="other" name="gender" value="other" />
-              <label for="other">Other</label></td>  
-              <td class="Td" style="margin-top: -10px;padding-bottom: 8px;"></td> 
+            
+            <td> <div>
+              <div class="input" style="border:none;">
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other" />
+                <label for="other">Other</label>
+              </div>
+              <p class="Td" style="margin-left: 20px;">Enter correct name</p>
+            </div>
+             </td>  
+               
           </tr>
 
           <tr class="form-control">
             <td><label id="maritial">Maritial Status</label></td>
-            <!-- <td id="mError"></td> -->
+            
             <td>
-              <input
-            type="radio"
-            id="married"
-            name="Maritial Status"
-            value="married"
-            onclick="enable()"
-          />
-          <label for="married">Married</label>
-          <input
-            type="radio"
-            id="notmarried"
-            name="Maritial Status"
-            value="notmarried"
-            onclick="disable()"
-          />
-          <label for="notmarried">Not Married</label>
+              <div>
+                <div class="input" style="border:none;">
+                  <input
+                  type="radio"
+                  id="married"
+                  name="Maritial Status"
+                  value="married"
+                  onclick="enable()"
+                />
+                <label for="married">Married</label>
+                <input
+                  type="radio"
+                  id="notmarried"
+                  name="Maritial Status"
+                  value="notmarried"
+                  onclick="disable()"
+                />
+                <label for="notmarried">Not Married</label>
+                </div>
+                <p class="Td" style="margin-left: 20px;">Enter correct name</p>
+              </div>
+             
             </td>
-            <td class="Td"></td>
+            
           </tr>
           <tr class="form-control">
             <td><label>Name of Spouse</label></td>
             <!-- <td id="sError"></td> -->
             <td>
-              <input
-              onfocusout="inputValid(2)"
+              <div>
+                <input
+                onfocusout="inputValid(4)"
             type="text"
             name=""
             id="spouse"
@@ -106,8 +120,11 @@
             class="input"
 
           />
+          <p class="Td" style="margin-left: 20px;">Enter correct name</p>
+              </div>
+              
             </td>
-            <td class="Td"></td>
+            
           </tr>
           <tr class="form-control">
             <td>
@@ -115,21 +132,27 @@
               <!-- <td id="eError"></td> -->
             </td>
             <td>
+             <div>
               <input
-              onfocusout="inputValid(3)"
+            onfocusout="inputValid(5)"
             type="text"
             name=""
             id="email"
             placeholder="Enter your Email"
             class="input"
           />
+
+             </div>
+             <p class="Td" style="margin-left: 20px;">Enter correct name</p>
             </td>
-            <td class="Td"></td>
+            
           </tr>
         </table>
-        <input type="checkbox" name="checkbox" value="check" id="agree" />&nbsp;&nbsp; I
+
+        <input type="checkbox" name="checkbox" value="check" id="agree" class="input" style="border:none;"/>&nbsp;&nbsp; I
         have read and agree to the Terms and Conditions
-        <br>
+        <p class="Td" style="margin-left: 25px;">Enter correct name</p>
+        
         <input type="submit" name="" class="btn"  value="submit"/>
         <!-- <a class="btn" style="color: white;text-decoration: none;text-align: center;" onclick="display()" href="#table"> DISPLAY </a> -->
 

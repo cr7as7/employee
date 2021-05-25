@@ -72,8 +72,21 @@ background-size: cover;
 
   margin-bottom: 5px;
 }
-.form-control input {
+.Td{
+color: red;
+visibility: hidden;
+}
+.input{
   border: 2px solid #f0f0f0;
+}
+.border{
+  border: 1px solid red;
+}
+.borderGreen{
+  border: 1px solid #2ecc71;
+}
+.form-control input {
+  
   border-radius: 5px;
   padding: 12px;
   width: max-content;
