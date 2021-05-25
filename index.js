@@ -52,6 +52,8 @@ function enable() {
 function disable() {
   document.getElementById("spouse").value = "";
   document.getElementById("spouse").disabled = true;
+  spouse.style.border="";
+  error[4].innerHTML=" ";
 }
 function isTermscheck(){
   if(!checkbox.checked) 
@@ -255,8 +257,22 @@ function inputValid(index){
     inputField[index].style.border="1px solid red";
     }
   }
-  else if(inputField[index].value.trim()==="")
+  else if(index==2)
   {
+    if(inputField[index].value.trim()==="")
+  { 
+    error[index+2].innerText="Error"; 
+    console.log(inputField[0].innerText.length);
+    error[index+2].style.color="red";
+    inputField[index].style.border="1px solid red";
+  }
+  else{
+    error[index+2].innerHTML=" ";
+    inputField[index].style.border="1px solid #2ecc71";
+  }
+  }
+  else if(inputField[index].value.trim()==="")
+  { 
     error[index].innerText="Error"; 
     console.log(inputField[0].innerText.length);
     error[index].style.color="red";
