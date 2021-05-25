@@ -16,7 +16,7 @@ const error = document.getElementsByClassName('Td');
 console.log(inputField);
 let storearray=[];
 
-// console.log("helloo");
+
 function display(){
   const tableData = document.getElementById("table");
   let x=localStorage.getItem(localStorage.key(0));
@@ -82,15 +82,7 @@ function isMarriedcheck(){
   error[3].innerHTML=" ";
   return true;
 }
-// function onsubmitt() {
-// let flag=true;
-//   flag &=isTermscheck();
-//   flag &=isGendercheck();
-//   flag &=isMarriedcheck();
 
-//   return flag;
- 
-// }
 function isEmail(emailval){
   var atSymbol = emailval.indexOf("@");
   if(atSymbol < 1)
@@ -135,24 +127,7 @@ function isSpouse(input,inputText){
   }
   return true;
 }
-// function onempty(){
-//   // let fnameText=document.forms["myForm"]["firstname"].value.trim();
-//   // let bool=isInputempty(firstname,fnameText);
-  
-//   // let lnameText=document.forms["myForm"]["lastname"].value.trim();
-//   // bool &=isInputempty(lastname,lnameText);
-  
-//   // let inputText=document.forms["myForm"]["email"].value.trim();
-//   // bool &=validEmail(email,inputText);
 
-// //if married button is checked but name of spouse is not there
-
-//   if(married.checked){
-//   let text=document.forms["myForm"]["spouse"].value.trim();
-//     bool &=isSpouse(spouse,text);
-//   }
-//   return bool;
-// }
 function genderString(){
   if(male.checked){
     return "Male";
@@ -203,10 +178,7 @@ checkbox.style.outline="";
 }
 function validateform(){
 
-  // if(!(onsubmitt() || onempty()))
-  // {
-  //   return false;
-  // }
+  
   if(!isTermscheck())
   {
     return false;
