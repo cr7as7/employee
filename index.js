@@ -238,7 +238,7 @@ function validateform() {
     email: Email
   }
   console.log(obj.firstName)
-  if(obj.firstName!==""&&obj.LastName!==""&&obj.email!==""&&isRadio())
+  if(obj.firstName!==""&&obj.LastName!==""&&isEmail(obj.email)&&isRadio())
   {
     storearray.push(obj);
   console.log(storearray);
