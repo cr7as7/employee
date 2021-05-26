@@ -102,34 +102,7 @@ function isEmail(emailval) {
   return true;
 
 }
-function isInputempty(input, inputText) {
-  if (inputText == "") {
-    input.style.border = "1px solid red";
-    return false;
-  } else {
-    input.style.border = "1px solid #2ecc71";
-  }
-  return true;
-}
-function validEmail(input, inputText) {
-  if (!isEmail(inputText)) {
-    input.style.border = "1px solid red";
-    return false;
-  } else {
-    input.style.border = "1px solid #2ecc71";
-  }
-  return true;
-}
-function isSpouse(input, inputText) {
-  if (inputText === "") {
-    input.style.border = "1px solid red";
-    return false;
-  }
-  else {
-    input.style.border = "1px solid #2ecc71";
-  }
-  return true;
-}
+
 
 function genderString() {
   if (male.checked) {
@@ -161,11 +134,7 @@ function wifeString() {
   }
 
 }
-function inputColorNormal(input) {
 
-  input.style.border = "";
-
-}
 function allColorNormal() {
   // inputColorNormal(firstname);
   // inputColorNormal(lastname);
