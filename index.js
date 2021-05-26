@@ -257,8 +257,26 @@ function validateform() {
 
 
 function inputValid(index) {
- 
-  if (inputField[ index ].value.trim() === "") {
+  if(index==5)
+  {
+    if (!isEmail(inputField[ index ].value.trim())) {
+      error[ index ].style.visibility = "visible";
+      // console.log(inputField[ 0 ].innerText.length);
+      error[ index ].style.color = "red";
+      // inputField[ index ].style.border="1px solid red";
+      inputField[index].classList.add('border');
+      inputField[index].classList.remove('borderGreen');
+      
+      return;
+    }
+    else {
+      error[ index ].style.visibility = "hidden";
+    inputField[index].classList.add('borderGreen');
+    inputField[index].classList.remove('border');
+    return;
+    }
+
+  }else if (inputField[ index ].value.trim() === "") {
     error[ index ].style.visibility = "visible";
     // console.log(inputField[ 0 ].innerText.length);
     error[ index ].style.color = "red";
