@@ -165,15 +165,10 @@ if(married.checked)
   }
   
 }
-else{
-  if(spouse.value.trim() !== "")
-  {
-    return false;
-  }
-  else{
-    return true;
-  }
-}
+inputField[4].classList.remove('borderGreen');
+inputField[4].classList.remove('border');
+error[ 4 ].style.visibility = "hidden";
+return true;
 
 }
 function validateform() {
@@ -213,7 +208,7 @@ function validateform() {
     email: Email
   }
   console.log(obj.firstName)
-  if(obj.firstName!==""&&obj.LastName!==""&&isEmail(obj.email)&&isRadio())
+  if(obj.firstName!==""&&obj.LastName!==""&&isEmail(obj.email)&&isRadio()&&isTermscheck())
   {
     storearray.push(obj);
   console.log(storearray);
