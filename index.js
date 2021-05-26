@@ -167,13 +167,19 @@ function inputColorNormal(input) {
 
 }
 function allColorNormal() {
-  inputColorNormal(firstname);
-  inputColorNormal(lastname);
-  inputColorNormal(spouse);
-  inputColorNormal(email);
-  gender.style.color = "";
-  maritial.style.color = "";
-  checkbox.style.outline = "";
+  // inputColorNormal(firstname);
+  // inputColorNormal(lastname);
+  // inputColorNormal(spouse);
+  // inputColorNormal(email);
+  // gender.style.color = "";
+  // maritial.style.color = "";
+  // checkbox.style.outline = "";
+  for(let i=0;i<inputField.length;i++)
+  {
+  inputField[i].classList.remove('borderGreen');
+  inputField[i].classList.remove('border');
+  error[ i ].style.visibility = "hidden";
+  }
 
 
 }
